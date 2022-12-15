@@ -44,7 +44,7 @@ namespace LabSchool.Services.AlunoService
             }
             if(aluno.DataNascimento is null)
             {
-                throw new Exception("Data de nascimento não pode ser nula");
+               throw new Exception("Data de nascimento não pode ser nula");
             }
             _context.Alunos.Add(aluno);
             await _context.SaveChangesAsync();
