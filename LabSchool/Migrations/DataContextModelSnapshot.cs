@@ -24,11 +24,11 @@ namespace LabSchool.Migrations
 
             modelBuilder.Entity("LabSchool.Models.Aluno", b =>
                 {
-                    b.Property<int?>("Codigo")
+                    b.Property<int>("Codigo")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("Codigo"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Codigo"));
 
                     b.Property<int?>("Atendimentos")
                         .HasColumnType("int");
@@ -58,11 +58,11 @@ namespace LabSchool.Migrations
 
             modelBuilder.Entity("LabSchool.Models.Pedagogo", b =>
                 {
-                    b.Property<int?>("Codigo")
+                    b.Property<int>("Codigo")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("Codigo"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Codigo"));
 
                     b.Property<int?>("Atendimentos")
                         .HasColumnType("int");
@@ -86,11 +86,11 @@ namespace LabSchool.Migrations
 
             modelBuilder.Entity("LabSchool.Models.Professor", b =>
                 {
-                    b.Property<int?>("Codigo")
+                    b.Property<int>("Codigo")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("Codigo"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Codigo"));
 
                     b.Property<long?>("Cpf")
                         .HasColumnType("bigint");

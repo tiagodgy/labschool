@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Computador\\Documents\\Program\\DevInHouse\\Módulo 2\\Semana 11\\LabSchool\\LabSchool\\LabSchool.csproj": {}
+    "C:\\Users\\Computador\\Documents\\Program\\LabSchool\\LabSchool\\LabSchool.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Computador\\Documents\\Program\\DevInHouse\\Módulo 2\\Semana 11\\LabSchool\\LabSchool\\LabSchool.csproj": {
+    "C:\\Users\\Computador\\Documents\\Program\\LabSchool\\LabSchool\\LabSchool.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Computador\\Documents\\Program\\DevInHouse\\Módulo 2\\Semana 11\\LabSchool\\LabSchool\\LabSchool.csproj",
+        "projectUniqueName": "C:\\Users\\Computador\\Documents\\Program\\LabSchool\\LabSchool\\LabSchool.csproj",
         "projectName": "LabSchool",
-        "projectPath": "C:\\Users\\Computador\\Documents\\Program\\DevInHouse\\Módulo 2\\Semana 11\\LabSchool\\LabSchool\\LabSchool.csproj",
+        "projectPath": "C:\\Users\\Computador\\Documents\\Program\\LabSchool\\LabSchool\\LabSchool.csproj",
         "packagesPath": "C:\\Users\\Computador\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Computador\\Documents\\Program\\DevInHouse\\Módulo 2\\Semana 11\\LabSchool\\LabSchool\\obj\\",
+        "outputPath": "C:\\Users\\Computador\\Documents\\Program\\LabSchool\\LabSchool\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Computador\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -14,61 +14,41 @@ namespace LabSchool.Services.AlunoService
         }
         public async Task<Aluno?> AdicionaAluno(Aluno aluno)
         {
-            var cpf = _context.Alunos.Any(x => x.Cpf == aluno.Cpf);
-            if (!cpf)
-            {
-                if (aluno.Situacao == "ATIVO" || aluno.Situacao == "IRREGULAR" || aluno.Situacao == "ATENDIMENTO_PEDAGOGICO" || aluno.Situacao == "INATIVO")
-                {
-                    if (aluno.Nota >= 0 && aluno.Nota <= 10)
-                    {
-                        if (aluno.Nome != null)
-                        {
-                            if (aluno.Telefone != null)
-                            {
-                                if(aluno.DataNascimento != null)
-                                {
-                                    if (aluno.Cpf != null) {
-                                        _context.Alunos.Add(aluno);
-                                        await _context.SaveChangesAsync();
-                                        return (aluno);
-                                    }
-                                    else
-                                    {
-                                        throw new Exception("CPF não pode ser nulo");
-                                    } 
-                                }
-                                else
-                                {
-                                    throw new Exception("Data de nascimento não pode ser nula");
-                                }
-
-                            }
-                            else
-                            {
-                                throw new Exception("Telefone não pode ser nulo");
-                            }
-                        }
-                        else
-                        {
-                            throw new Exception("Nome não pode ser nulo");
-                        }
-                    }
-                    else
-                    {
-                        throw new Exception("Nota deve ser entre 0 e 10");
-                    }
-
-
-                }
-                else
-                {
-                    throw new Exception("Situação deve ser ATIVO, IRREGULAR, ATENDIMENTO_PEDAGOGICO ou INATIVO");
-                }
-            }
-            else
+            if (_context.Alunos.Any(x => x.Cpf == aluno.Cpf))
             {
                 throw new ConflitoCpfException("CPF já cadastrado");
             }
+            if (aluno.Situacao == "ATIVO" || aluno.Situacao == "IRREGULAR" || aluno.Situacao == "ATENDIMENTO_PEDAGOGICO" || aluno.Situacao == "INATIVO" )
+            {
+
+            }
+            else
+            {
+                throw new Exception("Situação deve ser ATIVO, IRREGULAR, ATENDIMENTO_PEDAGOGICO ou INATIVO");
+            }
+            if (aluno.Nota < 0 || aluno.Nota > 10 || aluno.Nota is null)
+            {
+                throw new Exception("Nota deve ser entre 0 e 10");
+            }
+            if (string.IsNullOrEmpty(aluno.Nome))
+            {
+                throw new Exception("Nome não pode ser nulo");
+            }
+            if (string.IsNullOrEmpty(aluno.Telefone))
+            {
+                throw new Exception("Telefone não pode ser nulo");
+            }
+            if(aluno.Cpf is null || aluno.Cpf.ToString().Length < 11 || aluno.Cpf.ToString().Length > 11)
+            {
+                throw new Exception("CPF não pode ser nulo e deve possuir 11 digitos");
+            }
+            if(aluno.DataNascimento is null)
+            {
+                throw new Exception("Data de nascimento não pode ser nula");
+            }
+            _context.Alunos.Add(aluno);
+            await _context.SaveChangesAsync();
+            return (aluno);
 
         }
 
