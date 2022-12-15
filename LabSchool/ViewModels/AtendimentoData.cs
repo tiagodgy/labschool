@@ -1,4 +1,4 @@
-﻿namespace LabSchool.Services.AtendimentoService
+﻿namespace LabSchool.ViewModels
 {
     public class AtendimentoData
     {

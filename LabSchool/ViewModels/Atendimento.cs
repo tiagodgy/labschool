@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 
-namespace LabSchool.Services.AtendimentoService
+namespace LabSchool.ViewModels
 {
     public class Atendimento
     {

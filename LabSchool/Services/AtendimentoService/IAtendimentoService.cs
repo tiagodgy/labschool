@@ -1,4 +1,6 @@
-﻿namespace LabSchool.Services.AtendimentoService
+﻿using LabSchool.ViewModels;
+
+namespace LabSchool.Services.AtendimentoService
 {
     public interface IAtendimentoService
     {

@@ -1,5 +1,6 @@
 ﻿using LabSchool.Data;
 using LabSchool.Exceptions;
+using LabSchool.ViewModels;
 
 namespace LabSchool.Services.AtendimentoService
 {

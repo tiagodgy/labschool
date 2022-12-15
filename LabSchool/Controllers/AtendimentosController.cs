@@ -1,5 +1,6 @@
 ﻿using LabSchool.Exceptions;
-using LabSchool.Services.AtendimentoService;
+using LabSchool.ViewModels;
+
 namespace LabSchool.Controllers
 {
     [Route("api/[controller]")]
